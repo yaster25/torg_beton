@@ -1,0 +1,376 @@
+
+/*
+================================================================================
+|                                     FOOTER                                   |
+================================================================================
+*/
+
+.footer{    
+    padding-top: 120px;
+    position: relative; 
+    background: url('../img/bg-footer.jpg') no-repeat center;
+    background-size: cover;
+    
+    &-form {
+        margin-bottom:40px;
+        &-text{
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 24px;
+            color: $color-white;
+            font-family: $custom-font-family;
+            &__phone{
+                display:inline-block;
+                vertical-align: middle;
+                font-size: 24px;
+                margin: -2px 0 0 20px;
+                color: $color-white;
+                font-weight: 400;
+                font-family: $base-font-family;
+                &:hover{
+                    color:$color-gold;
+                }
+            }
+        }
+        .form-checkbox{
+            margin-top: 15px;
+        }
+        
+    }
+    
+    &__main{
+        border-top: 1px solid rgba(255, 255, 255, 0.26);
+        margin-top: 90px;
+        padding-top: 30px;
+        padding-bottom: 50px;
+        .y-col{
+            width: 20%;
+        }
+    }
+    
+    &-nav-main{
+        line-height: 1.3;
+        &-item{
+            margin-bottom: 27px;
+            &:last-child{
+                margin-bottom: 0;
+            }
+            &__link{
+                font-weight: bold;
+                font-size: 17px;                
+                letter-spacing: 0.04em;
+                color: $color-gold;
+                text-transform: uppercase;
+                &:hover{
+                    color: $color-white;
+                }
+            }
+        }
+    }
+    
+    &-title{
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 28px;
+        letter-spacing: 0.02em;
+        color: $color-gold;
+        margin-bottom: 5px;
+        line-height: 1.3;
+        text-transform: uppercase;
+        a{
+            color:inherit;
+            &:hover{
+                color: $color-white;
+            }
+            svg{
+                display:none;
+            }
+        }
+    }
+    
+    &-nav{
+        margin-bottom: 20px;
+        line-height: 1.3;
+        &:last-child{
+            margin-bottom: 0;
+        }
+        &-item{
+            &:last-child{
+                margin-bottom: 0;
+            }
+            &__link{
+                font-size: 14px;
+                line-height: 24px;
+                letter-spacing: 0.02em;
+                color: #C4C4C4;
+                &:hover{
+                    color: $color-gold;
+                    text-decoration: underline;
+
+                }
+            }
+        }
+        
+    }
+    
+    &-phone{
+        margin-bottom: 4px;
+        p{
+            font-size: 14px;
+            line-height: 16px;
+            margin-bottom: -2px;
+            font-family: $custom-font-family;
+            color: $color-gold;
+        }
+        a{
+            font-size: 24px;
+            color: $color-white;
+            &:hover{
+                color: $color-gold;
+            }
+        }
+    }
+    
+    &-email{
+        font-size: 16px;
+        color: $color-white;
+        margin-bottom: 17px;
+        a{
+            color:inherit;
+            svg{
+                fill:currentColor;
+                display: inline-block;
+                vertical-align: middle;
+                margin: -3px 10px 0 0;
+            }
+            &:hover{
+                color: $color-gold;
+            }
+        }
+    }
+    
+    &-address{
+        font-size: 14px;
+        line-height: 22px;
+        font-family: $custom-font-family;
+        color: rgba(255, 255, 255, 0.6);
+        margin-bottom: 15px;
+    }
+    
+    &__btn.btn{
+        font-size: 13px;
+        font-weight: 400;
+        width: 190px;
+        max-width: 100%;
+    }
+    
+    &__bottom{
+        background: rgba(0, 0, 0, 0.26);
+        padding: 17px 0 16px 0;
+        font-size: 14px;
+        font-family: $custom-font-family;
+        color: $color-white;
+        .wrapper{
+            @include flexbox;
+            @include align-items(center);
+            @include justify-content(space-between);
+        }
+    }
+    &__copy{
+        color: inherit;
+        text-decoration: underline;
+        margin-left: 46px;
+        font-size: 13px;
+            &:hover{
+            color: $color-gold;
+        }
+    }
+}
+
+.developer{
+    display: inline-block;
+    vertical-align: middle;
+    img{
+        display:block;
+        width: 135px;
+    }
+    &:hover{
+        opacity: 0.5;
+    }
+}
+
+
+
+@media screen and (max-width: 1620px) {
+    
+}
+@media screen and (max-width: 1439px) {
+    
+    
+}
+
+@media screen and (max-width: 1199px) {
+   .footer {
+       padding-top: 60px;
+    }
+    .footer-phone a{
+        font-size: 22px;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .footer-form{
+        .y-col-3{
+            width: 50%;
+        }
+        .y-col-6{
+            width: 100%;
+        }
+        .y-col-8{
+            width: 100%;
+        }
+    }
+    .footer-form-text{
+        font-size: 12px;
+    }
+    .footer-form-text__phone{
+            font-size: 22px;
+    }
+    .footer__main {
+        margin-top: 30px;
+        padding-top: 20px;
+        padding-bottom: 40px;
+    }
+    .footer-nav-main{
+        line-height: 20px;
+    }
+    .footer-nav-main-item{
+        margin-bottom: 20px;
+    }
+    .footer-form .form-checkbox{
+        margin-top: 0;
+    }
+    
+    .footer-nav-main-item__link{
+        font-size: 14px;
+    }
+    .footer-title{
+        font-size: 14px;
+        line-height: 20px;
+        margin-bottom: 10px;
+    }
+    .footer-nav-item__link{
+        font-size: 12px;
+    }
+    .footer__main .y-col {
+        width: 25%;
+        &:last-child{
+            width: 100%;
+            padding-top: 15px;
+        }
+    }
+    .footer-phone {
+        margin-bottom: 0;
+    }
+    .footer-phone p{
+        font-size: 12px;
+    }
+    .footer-email{
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+    .footer-address{
+        font-size: 12px;
+        line-height: 18px;
+    }
+    .footer__bottom{
+        font-size:12px;
+        padding: 14px 0;
+    }
+    .footer__copy{
+        font-size: 10px;
+        margin-left: 20px;
+    }
+    .developer img{
+        width: 100px;
+    }
+
+    .footer-form {
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .footer-form .y-col-3{
+        width: 100%;
+    }
+    .footer__main .y-col{
+        width: 100%;
+        padding-bottom: 20px;
+    }
+    .footer__main .y-row{
+        margin-bottom: -20px;
+    }
+    
+    .footer-title{
+        margin-bottom: 0px;
+        margin-top: 20px;
+        &:first-child{
+            margin-top: 0;
+        }
+        a{
+            display:inline-block;
+            position: relative;
+            padding-right: 20px;
+            svg{
+                position: absolute;
+                fill:currentColor;
+                width: 10px;
+                height: 6px;
+                right: 0;
+                top: calc(50% - 3px);
+                transition: $default-transition;
+                display: block;
+            }
+            
+            &.active{
+                svg{
+                    transform:rotate(-180deg);
+                }
+            }
+        }
+    }
+    .footer-nav{
+        display: none;
+        margin-top: 10px;
+    }
+}
+
+
+@media screen and (max-width: 639px) {
+    
+}
+
+@media screen and (max-width: 479px) {
+    .footer-form-text{
+        span{
+            display:block;
+        }
+    }
+    .footer-form-text__phone{
+        margin: 0;
+    }
+    
+    .footer__bottom-text{
+        display: block;
+        margin-bottom: 5px;
+    }
+    .footer__copy{
+        margin: 0;
+    }
+    
+}
+
+@media screen and (max-width: 374px) {
+    
+}
