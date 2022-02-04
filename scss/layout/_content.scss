@@ -2572,6 +2572,91 @@ ul {
         &.active{
             display: block;
         }
+        
+        &_1{
+            left: 240px;
+            top: 150px;
+        }
+        &_2{
+            top: 190px;
+            left: 260px;
+        }
+        &_3{
+            left: 235px;
+            top: 178px;
+        }
+        &_4{
+            left: 260px;
+            top: 160px;
+        }
+        &_5{
+            left: 260px;
+            top: 190px;
+        }
+        &_6{
+            left: 235px;
+            top: 178px;
+        }
+        &_7{
+            top: 180px;
+            left: 250px;
+        }
+        &_8{
+            left: 270px;
+            top: 200px;
+        }
+        &_9{
+            left: 245px;
+            top: 198px;
+        }
+        &_10{
+            left: 240px;
+            top: 170px;
+        }
+        &_11{
+            top: 180px;
+            left: 250px;
+        }
+        &_12{
+            left: 250px;
+            top: 160px;
+        }
+        &_13{
+            top: 170px;
+            left: 260px;
+        }
+        &_14{
+            top: 280px;
+            left: 230px;
+        }
+        &_15{
+            left: 245px;
+            top: 190px;
+        }
+        &_16{
+            left: 270px;
+            top: 200px;
+        }
+        &_17{
+            left: 240px;
+            top: 155px;
+        }
+        &_18{
+            top: 180px;
+            left: 270px;
+        }
+        &_19{
+            top: 175px;
+            left: 245px;
+        }
+        &_20{
+            top: 185px;
+            left: 255px;
+        }
+        &_21{
+            left: 275px;
+            top: 160px;
+        }
     }
     
     &-list{
@@ -3100,7 +3185,25 @@ textarea.form-input{
   opacity: 0;
 }
 .file__input--label {
-
+    cursor: pointer;
+    &-2{
+        color: $color-blue;
+        font-size: 14px;
+        font-family: $custom-font-family;
+        text-decoration: underline;
+        position: relative;
+        padding-left: 25px;
+        transition: $default-transition;
+        svg{
+            position:absolute;
+            top: 0;
+            left: 0;
+            fill:currentColor;
+        }
+        &:hover{
+            color: $color-gold;
+        }
+    }
 }
 .file__input--label:after {
 
@@ -3143,6 +3246,9 @@ textarea.form-input{
             fill:currentColor;
         } 
     }
+}
+#form-products__upload-2{
+    padding-top: 10px;
 }
 
 .related-tabs{
@@ -3231,7 +3337,7 @@ textarea.form-input{
     }
     
     .text-star{
-        z-index: 9;
+        z-index: 8;
         //margin-top: -90px;
         //margin-left: 400px;
         position: absolute;
@@ -3864,6 +3970,9 @@ textarea.form-input{
             line-height: normal;
             margin: 0 15px 0 0;
             flex: none;
+        }
+        &:last-child{
+            border-right:none;
         }
     }
 }
@@ -4780,6 +4889,7 @@ textarea.form-input{
         .subnav-2.subnav-2_subnav-open .subnav-2-item.subnav-2-item_subnav-open .subnav-2-item__link{
             color: $color-blue;
             padding-left: 20px;
+            padding-right: 0;
         }
         .subnav-2.subnav-2_subnav-open {
             margin-top: 0px;
@@ -4798,6 +4908,9 @@ textarea.form-input{
         
     }
     
+    .related-all .subnav-3{
+        padding-top: 20px;
+    }
     
 
     .section-sertificates-white .slider-sertificates__slide{
@@ -6518,6 +6631,10 @@ textarea.form-input{
     }
     .vacancy-contact{
         line-height: 28px;
+    }
+
+    .file__input--label-2{
+        font-size: 13px;
     }
 }
 

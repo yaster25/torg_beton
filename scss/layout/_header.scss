@@ -329,6 +329,10 @@
         top: 0;
         bottom: 0;
         width: 900px;
+        &__link{
+            display: none;
+        }
+
     }
     &-item{
         margin-bottom:8px;
@@ -473,9 +477,9 @@
             &:first-child{
                 border-top: 1px solid rgba($color-white, 0.2);
                 .nav-item__link{
-                    color: $color-gold;
+                    //color: $color-gold;
                     &:hover{
-                        color:  $color-gold;
+                        //color:  $color-gold;
                     }
                 }
             }
@@ -668,6 +672,22 @@
     .subnav-3-item__link{
         font-size: 14px;
     }
+
+
+    .subnav-3-wrapper__link{
+        display: inline;
+        font-weight: 300;
+        font-size: 14px;
+        letter-spacing: 0.02em;
+        color: $color-gold;
+        border-bottom: 1px solid $color-gold;
+        white-space: nowrap;
+    }
+    
+    .subnav-3-wrapper__link+.subnav-3{
+        padding-top: 20px;
+    }
+    
 }
 
 @media screen and (max-width: 991px) {

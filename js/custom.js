@@ -416,7 +416,7 @@ $(document).ready(function(){
         ]
     });
 
-    $('.steps-item').on('click', function(event) {
+    $('.steps-item').mouseenter(function () {
         if(window.innerWidth>991){
             $(this).parents('.steps').find('.steps-item').removeClass('active');
             $(this).addClass('active');
@@ -537,22 +537,7 @@ $(document).ready(function(){
          });
     });
  
-    $('.js-popup').fancybox({
-        touch: false,
-        closeExisting: true,
-        autoFocus: false,
-        btnTpl: {  
-            smallBtn:
-                '<button type="button" data-fancybox-close class="fancybox-button fancybox-close-small" title="{{CLOSE}}">' +
-                '<svg width="15" height="15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M.767 15a.768.768 0 0 1-.542-1.31L13.69.224a.767.767 0 0 1 1.085 1.085L1.309 14.775A.76.76 0 0 1 .767 15Z" fill="#000"/><path d="M14.232 15a.76.76 0 0 1-.542-.225L.225 1.311A.767.767 0 1 1 1.309.226L14.774 13.69a.768.768 0 0 1-.542 1.31Z" fill="#000"/></svg>' +
-                "</button>"
-            },
-        afterLoad: function(){
-
-            $('.slider-for').slick('setPosition');
-            $('.slider-for-nav').slick('setPosition');
-        }
-    });
+    
     
     $('select').selectric({
         disableOnMobile: false,
@@ -600,11 +585,13 @@ $(document).ready(function(){
     }
     
     $('.regions-list-item__link').on('click', function(event) {  
-        $('.regions-list-item__link').removeClass('active');
-        $(this).addClass('active');
-        $('.regions-item').removeClass('active');
-        $('.regions-item_'+$(this).attr('data-region')).addClass('active');
-        return false;
+        if(window.innerWidth>991){
+            $('.regions-list-item__link').removeClass('active');
+            $(this).addClass('active');
+            $('.regions-item').removeClass('active');
+            $('.regions-item_'+$(this).attr('data-region')).addClass('active');
+            return false;
+        }
     });
     
     $('#js-btn-delivery').on('click', function(event) {  
@@ -712,13 +699,25 @@ $(document).ready(function(){
     
     
     // ------------  File upload BEGIN ------------
-	$('.file__input--file').on('change',function(event){
+	$('#customFile').on('change',function(event){
         $(this).parents('.form-products').removeClass('list').addClass('upload');
 		var files = event.target.files;
 		for (var i = 0; i < files.length; i++) {
 			var file = files[i];
             
             $('#form-products__upload').append("<div class='file__value'><svg  class='file__value-icon' width='18' height='20' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M13.037 0c.322.061.649.107.965.192a5.394 5.394 0 0 1 3.046 2.14 5.353 5.353 0 0 1 .924 3.597 5.262 5.262 0 0 1-1.561 3.279 5084.047 5084.047 0 0 1-9.408 9.36C5.85 19.707 4.445 20.06 2.896 19.58 1.308 19.092.347 17.972.065 16.345c-.23-1.315.132-2.502 1.075-3.46 1.922-1.953 3.87-3.87 5.805-5.798 1.165-1.16 2.317-2.32 3.488-3.466a2.777 2.777 0 0 1 2.232-.773 2.784 2.784 0 0 1 2.021 1.219 2.762 2.762 0 0 1-.358 3.508c-1.211 1.215-2.43 2.422-3.645 3.632a7829.393 7829.393 0 0 1-3.072 3.057c-.348.345-.854.305-1.104-.076a.678.678 0 0 1 .051-.809c.05-.06.108-.111.162-.166l6.568-6.538c.378-.376.564-.813.454-1.343a1.392 1.392 0 0 0-.908-1.046 1.406 1.406 0 0 0-1.365.247c-.05.041-.097.086-.143.131-3.044 3.03-6.087 6.062-9.13 9.095-.964.961-1.086 2.43-.306 3.511.981 1.368 2.938 1.526 4.154.324 1.656-1.637 3.306-3.279 4.951-4.926L15.383 8.3c.896-.893 1.307-1.966 1.226-3.23-.112-1.779-1.563-3.369-3.337-3.635-1.4-.21-2.602.184-3.607 1.18-2.286 2.275-4.57 4.55-6.854 6.827-.203.202-.43.308-.715.239-.528-.128-.697-.766-.306-1.16.603-.61 1.214-1.211 1.822-1.817L8.67 1.666C9.602.734 10.712.177 12.03.037a.774.774 0 0 0 .114-.03L13.037 0Z'/></svg><div class='file__value--text'>" + file.name + "</div><div class='file__value--remove' data-id='" + file.name + "' ><svg width='12' height='12' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M.614 12a.614.614 0 0 1-.433-1.048L10.952.18a.614.614 0 1 1 .868.868L1.048 11.82a.609.609 0 0 1-.434.18Z'/><path d='M11.386 12a.608.608 0 0 1-.434-.18L.18 1.048a.614.614 0 1 1 .867-.867L11.82 10.952A.614.614 0 0 1 11.386 12Z'/></svg></div></div>");
+		}	
+        
+         
+        
+	});
+    
+    $('#customFile-2').on('change',function(event){
+		var files = event.target.files;
+		for (var i = 0; i < files.length; i++) {
+			var file = files[i];
+            $('#form-products__upload-2').show();
+            $('#form-products__upload-2').append("<div class='file__value'><svg  class='file__value-icon' width='18' height='20' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M13.037 0c.322.061.649.107.965.192a5.394 5.394 0 0 1 3.046 2.14 5.353 5.353 0 0 1 .924 3.597 5.262 5.262 0 0 1-1.561 3.279 5084.047 5084.047 0 0 1-9.408 9.36C5.85 19.707 4.445 20.06 2.896 19.58 1.308 19.092.347 17.972.065 16.345c-.23-1.315.132-2.502 1.075-3.46 1.922-1.953 3.87-3.87 5.805-5.798 1.165-1.16 2.317-2.32 3.488-3.466a2.777 2.777 0 0 1 2.232-.773 2.784 2.784 0 0 1 2.021 1.219 2.762 2.762 0 0 1-.358 3.508c-1.211 1.215-2.43 2.422-3.645 3.632a7829.393 7829.393 0 0 1-3.072 3.057c-.348.345-.854.305-1.104-.076a.678.678 0 0 1 .051-.809c.05-.06.108-.111.162-.166l6.568-6.538c.378-.376.564-.813.454-1.343a1.392 1.392 0 0 0-.908-1.046 1.406 1.406 0 0 0-1.365.247c-.05.041-.097.086-.143.131-3.044 3.03-6.087 6.062-9.13 9.095-.964.961-1.086 2.43-.306 3.511.981 1.368 2.938 1.526 4.154.324 1.656-1.637 3.306-3.279 4.951-4.926L15.383 8.3c.896-.893 1.307-1.966 1.226-3.23-.112-1.779-1.563-3.369-3.337-3.635-1.4-.21-2.602.184-3.607 1.18-2.286 2.275-4.57 4.55-6.854 6.827-.203.202-.43.308-.715.239-.528-.128-.697-.766-.306-1.16.603-.61 1.214-1.211 1.822-1.817L8.67 1.666C9.602.734 10.712.177 12.03.037a.774.774 0 0 0 .114-.03L13.037 0Z'/></svg><div class='file__value--text'>" + file.name + "</div><div class='file__value--remove' data-id='" + file.name + "' ><svg width='12' height='12' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M.614 12a.614.614 0 0 1-.433-1.048L10.952.18a.614.614 0 1 1 .868.868L1.048 11.82a.609.609 0 0 1-.434.18Z'/><path d='M11.386 12a.608.608 0 0 1-.434-.18L.18 1.048a.614.614 0 1 1 .867-.867L11.82 10.952A.614.614 0 0 1 11.386 12Z'/></svg></div></div>");
 		}	
         
          
@@ -732,7 +731,7 @@ $(document).ready(function(){
 	// ------------ File upload END ------------ 
     
     
-    $('.reasons-list-item').on('click', function(event) {
+    $('.reasons-list-item').on('mouseenter', function(event) {
         if(window.innerWidth>991){
             $(this).parents('.reasons').find('.reasons-list-item').removeClass('active');
             $(this).addClass('active');
@@ -787,8 +786,44 @@ $(document).ready(function(){
             nextSlide = nextSlide + 1;
             $el.text(nextSlide);
         });
+     
+        var isSliding = false;
+
+        $('.js-slider-autopark').on('beforeChange', function() {
+            isSliding = true;
+        });
+
+        $('.js-slider-autopark').on('afterChange', function() {
+            isSliding = false;
+        });
+
+        $('.js-slider-autopark').find(".js-popup").click(function() {
+            if (isSliding) {
+                event.stopImmediatePropagation();
+                event.stopPropagation();
+                event.preventDefault();
+                return false;
+            }
+        });
 
     }
+    
+    $('.js-popup').fancybox({
+        touch: false,
+        closeExisting: true,
+        autoFocus: false,
+        btnTpl: {  
+            smallBtn:
+                '<button type="button" data-fancybox-close class="fancybox-button fancybox-close-small" title="{{CLOSE}}">' +
+                '<svg width="15" height="15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M.767 15a.768.768 0 0 1-.542-1.31L13.69.224a.767.767 0 0 1 1.085 1.085L1.309 14.775A.76.76 0 0 1 .767 15Z" fill="#000"/><path d="M14.232 15a.76.76 0 0 1-.542-.225L.225 1.311A.767.767 0 1 1 1.309.226L14.774 13.69a.768.768 0 0 1-.542 1.31Z" fill="#000"/></svg>' +
+                "</button>"
+            },
+        afterLoad: function(){
+
+            $('.slider-for').slick('setPosition');
+            $('.slider-for-nav').slick('setPosition');
+        }
+    });
     
     
     $('.slider-for').slick({
